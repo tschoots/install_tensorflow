@@ -1,0 +1,18 @@
+#this is a rough description of the installation steps to install tensorflow on ubuntu 17.04 with GPU support
+1. install with apt get 
+apt-get install nvidia-cuda-dev nvidia-cuda-toolkit nvidia-nsight
+# https://medium.com/@at15/install-nvidia-cuda-on-ubuntu-17-04-823300ab7bcc
+
+2. when cuda 8.0 is properly installed install cuDNN5.1 by first downloading it from this url
+https://developer.nvidia.com/rdp/cudnn-download
+
+3. untar the file and move the cuda dir to /opt
+
+4. put the following statement in ~/.profile 
+export LD_LIBRARY_PATH=/opt/cuda/lib64
+
+# now you can use the tensor flow , test with
+https://www.tensorflow.org/install/install_linux#ValidateYourInstallation
+
+# then go on with the getting started
+https://www.tensorflow.org/get_started/get_started
